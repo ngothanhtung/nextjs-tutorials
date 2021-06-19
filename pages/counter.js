@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Link from 'next/link';
 import { END } from 'redux-saga';
 import { wrapper } from '../app/store';
 import { login } from '../app/auth/actions';
 
-const Index = () => {
+const Counter = () => {
   const dispatch = useDispatch();
   const count = useSelector((state) => state.counter.count);
 
@@ -15,12 +14,6 @@ const Index = () => {
 
   return (
     <div>
-      <nav>
-        <Link href='/counter'>
-          <a>Counter</a>
-        </Link>
-      </nav>
-
       <h1>Redux Sagas</h1>
       <button
         onClick={() => {
@@ -44,4 +37,4 @@ const Index = () => {
 //   await store.sagaTask.toPromise();
 // });
 
-export default Index;
+export default Counter;
