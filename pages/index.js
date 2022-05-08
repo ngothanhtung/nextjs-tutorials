@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
-import { END } from 'redux-saga';
-import { wrapper } from '../app/store';
 import { login } from '../app/auth/actions';
+import Login from '../components/Login';
 
 const Index = () => {
   const dispatch = useDispatch();
@@ -15,6 +14,7 @@ const Index = () => {
 
   return (
     <div>
+      <Login />
       <nav>
         <Link href='/counter'>
           <a>Counter</a>
